@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: grey;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-color: #171717;
+  color: #000;
+  line-height: 1.6;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.lines {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  margin: auto;
+  width: 90vw;
+}
+
+.lines .line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.lines .line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  animation: run 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.lines .line:nth-child(1) {
+  margin-left: -25%;
+}
+
+.lines .line:nth-child(1)::after {
+  animation-delay: 2s;
+}
+
+.lines .line:nth-child(3) {
+  margin-left: 25%;
+}
+
+.lines .line:nth-child(3)::after {
+  animation-delay: 2.5s;
+}
+
+.header {
+  display: flex;
+}
+.header .header-content {
+  display: inline-flex;
+  width: 100%;
+  padding: 15px;
+  justify-content: space-around;
+}
+.header .navbar {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.header .navbar ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.header .navbar ul li {
+  display: inline-block;
+}
+.header .navbar a {
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 300ms;
+}
+.header .navbar a:hover {
+  color: white;
+}
+.header .logo-web {
+  width: 10%;
+}
+.header .download-btn {
+  border-radius: 20px;
+  width: 7%;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 300ms;
+}
+.header .download-btn:hover {
+  border-radius: 25px;
+  background-color: gray;
+  color: white;
+}
+
+.main {
+  padding: 60px 15px;
+}
+.main .main-content {
+  padding: 25px 5px;
+  display: flex;
+  justify-content: center;
+}
+.main .main-txt {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0px 35px;
+}
+.main .main-txt h1 {
+  text-transform: uppercase;
+  font-size: 60px;
+  color: #cccccc;
+}
+.main .main-video {
+  width: 50%;
+}
+.main .yelan-mp4 {
+  border-radius: 20px;
+  width: 100%;
+  transition: all 300ms;
+  opacity: 50%;
+}
+.main .yelan-mp4:hover {
+  opacity: 100%;
+}
+
+.section1 .section-container {
+  display: flex;
+  padding: 20px;
+}
+.section1 .section-container .section-img {
+  width: 19%;
+  margin: 10px;
+  border-radius: 7px;
+}
+.section1 #mona {
+  border: 3px solid rgb(35, 35, 153);
+  animation: border-img;
+}
+@keyframes border-img {}
+.section1 #noelle {
+  border: 3px solid yellow;
+}
+.section1 #yelan {
+  border: 3px solid skyblue;
+}
+.section1 #raiden {
+  border: 3px solid purple;
+}
+.section1 #nahida {
+  border: 3px solid rgb(10, 226, 10);
+}
+
+.section2 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.section2 .section2-container {
+  width: 80%;
+}
+.section2 .sticker1 {
+  width: 250px;
+}
+.section2 .div-info {
+  display: flex;
+}
+.section2 .img {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+.section2 .sticker-txt {
+  width: 75%;
+  padding: 20px;
+}
+.section2 .sticker-txt p {
+  color: rgb(255, 255, 255);
+}
+.section2 .element-img {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section2 .element-img img {
+  width: 200px;
+}
+.section2 .element-img .electro {
+  width: 300px;
+}
+
+.footer {
+  padding: 30px;
+}
+.footer .footer-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer .ul-footer {
+  padding: 25px;
+}
+.footer .ul-footer .copy {
+  color: aliceblue;
+}
+.footer .ul-footer ul {
+  list-style: none;
+}
+.footer .ul-footer ul a {
+  text-decoration: none;
+}
+.footer .ul-footer ul a li {
+  transition: all;
+}
+.footer .ul-footer ul a li:hover {
+  color: aliceblue;
+}
+@keyframes run {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+.yae-fixed {
+  width: 200px;
+  position: fixed;
+  bottom: -10px;
+  animation: noelleSlide 1s ease-in-out;
+}
+
+@keyframes noelleSlide {
+  0% {
+    transform: translateY(200px);
+  }
+}/*# sourceMappingURL=styles.css.map */
