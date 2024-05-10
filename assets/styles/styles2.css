@@ -122,9 +122,12 @@ body {
   position: relative;
   margin: 0 auto;
   margin-top: 100px;
+  height: 100%;
 }
 .main .main-container .main-content {
   display: flex;
+  height: 50%;
+  max-height: 700px;
 }
 .main .main-container .main-content .main-txt {
   width: 70%;
@@ -140,10 +143,37 @@ body {
   width: 30%;
 }
 .main .main-container .main-content .main-img img {
-  height: 60%;
+  height: 100%;
   filter: drop-shadow(5px 5px 10px #131a77);
   animation: yelanShadow 1s ease-in-out infinite;
 }
+
+.footer {
+  padding: 30px;
+}
+.footer .footer-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer .ul-footer {
+  padding: 25px;
+}
+.footer .ul-footer .copy {
+  color: aliceblue;
+}
+.footer .ul-footer ul {
+  list-style: none;
+}
+.footer .ul-footer ul a {
+  text-decoration: none;
+}
+.footer .ul-footer ul a li {
+  transition: all;
+}
+.footer .ul-footer ul a li:hover {
+  color: aliceblue;
+}
+
 @keyframes yelanShadow {
   0% {
     filter: drop-shadow(3px 3px 6px #131a77);
@@ -154,4 +184,15 @@ body {
   100% {
     filter: drop-shadow(3px 3px 6px #131a77);
   }
+}
+@keyframes noelleSlide {
+  0% {
+    transform: translateY(200px);
+  }
+}
+.yae-fixed {
+  width: 200px;
+  position: fixed;
+  bottom: -10px;
+  animation: noelleSlide 1s ease-in-out;
 }/*# sourceMappingURL=styles2.css.map */
