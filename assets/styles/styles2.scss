@@ -134,48 +134,84 @@ body {
     }
 }
 
-.main {
-    max-width: 80%;
-    position: relative;
+input {
+    width: 300px;
+    padding: 17px;
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(33, 40, 105, 0.2);
+    margin-right: 20px;
+}
+
+.form-content {
+    background: linear-gradient(50deg, rgb(40, 42, 55)0%, rgba(40, 42, 55, 0.7)), url(../img/fomr.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    width: 65%;
+    height: 600px;
+    border-radius: 25px;
+
     margin: 0 auto;
-    margin-top: 100px;
-    height: 100%;
 
-    .main-container {
-
-
-        .main-content {
-            display: flex;
-            height: 50%;
-
-            max-height: 700px;
-
-            .main-txt {
-                width: 70%;
-
-                h2 {
-                    font-size: 35px;
-                }
-
-                p {
-                    font-size: 18px;
-                    font-weight: 600;
-                }
-            }
-
-            .main-img {
-                width: 30%;
-
-                img {
-                    height: 100%;
-                    filter: drop-shadow(5px 5px 10px #131a77);
-                    animation: yelanShadow 1s ease-in-out infinite;
-
-                }
-            }
-        }
+    h2 {
+        color: lightcyan;
     }
+}
 
+
+.form2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+label {
+    font-size: 17px;
+    margin-bottom: 10px;
+    display: flex;
+    color: lightcyan;
+}
+
+form input {
+    padding: 17px 14px;
+    border: 0;
+    font-size: 15px;
+    margin-bottom: 17px;
+    height: 20px;
+    color: lightcyan;
+    border-radius: 5px;
+    background-color: #333646;
+
+    border: 1px solid lightcyan;
+}
+
+textarea {
+    margin-bottom: 17px;
+    padding: 5px;
+    color: lightcyan;
+    background-color: #333646;
+    border: 1px solid lightcyan;
+
+}
+
+.btn {
+    text-transform: uppercase;
+    width: 120px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 10px 25px 25px 25px;
+    transition: all 100ms ease-in-out;
+    color: lightcyan;
+}
+
+.btn:hover {
+    background-color: #352F44;
+    box-shadow: 0px 3px 3px black;
+    border: none;
 }
 
 .footer {
@@ -211,20 +247,6 @@ body {
     }
 }
 
-
-@keyframes yelanShadow {
-    0% {
-        filter: drop-shadow(3px 3px 6px #131a77);
-    }
-
-    50% {
-        filter: drop-shadow(5px 5px 10px #9007b3);
-    }
-
-    100% {
-        filter: drop-shadow(3px 3px 6px #131a77);
-    }
-}
 
 @keyframes noelleSlide {
     0% {
