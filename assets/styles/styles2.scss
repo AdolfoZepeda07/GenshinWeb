@@ -151,7 +151,7 @@ input {
     background-size: cover;
     padding: 30px;
     width: 65%;
-    height: 600px;
+    height: 550px;
     border-radius: 25px;
 
     margin: 0 auto;
@@ -262,4 +262,27 @@ textarea {
     bottom: -10px;
 
     animation: noelleSlide 1s ease-in-out;
+}
+
+
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+    a {
+        font-size: 30px;
+        transition: all 300ms ease-in-out;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a:hover {
+        background-color: #ffffff;
+        transform: scale(1.2);
+    }
 }

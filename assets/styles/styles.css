@@ -259,4 +259,9 @@ body {
   0% {
     transform: translateY(200px);
   }
+}
+@media (max-width: 137px) {
+  .header .header-content .navbar {
+    background-color: red;
+  }
 }/*# sourceMappingURL=styles.css.map */
